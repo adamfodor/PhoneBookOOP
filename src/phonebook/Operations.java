@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Operations {
-	
+
 	private ArrayList<Entry> list;
 
 	public Operations(ArrayList<Entry> l) {
@@ -69,7 +69,6 @@ public class Operations {
 	/**
 	 * Letörli a konzolt és utána folytatja. Ha torolni szeretnenk a listabol ezeel
 	 * lehet.
-	 * @return True ha sikerult a törlés, False ha nem sikerult a torles.
 	 */
 	public boolean delete() {
 		clear();
@@ -87,7 +86,7 @@ public class Operations {
 		return result;
 	}
 
-	protected int size(ArrayList<Entry> db) {
+	public int size(ArrayList<Entry> db) {
 		return db.size();
 	}
 
@@ -104,7 +103,7 @@ public class Operations {
 	 * választani. Ellenorzi a bemenetet hogy szám legyen és ne olyat valasszon ami
 	 * nincs benne.
 	 * 
-	 * @return Entry tipusu objektummal ter vissza vagy null ha nem sikerult a kivalasztas.
+	 * @return Entry tipusu objektummal ter vissza
 	 */
 	public Entry chosing(ArrayList<Entry> l) {
 		clear();
@@ -119,7 +118,7 @@ public class Operations {
 			if (index >= 0 && index < l.size()) {
 				res = l.get(index);
 			} else {
-				
+				System.out.println("Egy számot kérek 1 és " + l.size() + " között");
 				res = null;
 			}
 		} catch (Exception e) {
@@ -131,7 +130,6 @@ public class Operations {
 
 	/**
 	 * Ha modositani akarunk egy rekordot akkor ez lesz meghivva. Letorli a konzolt.
-	 * @return true ha sikerult, false ha nem sikerult modositani.
 	 */
 	public boolean mod() {
 		clear();

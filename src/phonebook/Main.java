@@ -14,7 +14,7 @@ public class Main {
 		Operations ops = new Operations(people);
 
 		while (true) {
-			System.out.println("1. Rekordok listazása");
+			System.out.println("1. Rekordok listázása");
 			System.out.println("2. Rekord hozzáadása");
 			System.out.println("3. Rekord törlése");
 			System.out.println("4. Keresés");
@@ -22,12 +22,14 @@ public class Main {
 			System.out.println("0. Kilépés\n");
 
 			Scanner input = new Scanner(System.in);
+			
 			try {
 				int choice = input.nextInt();
 				
 				if (choice >= 0 && choice <= 5) {
 					if (choice == 0) {
 						operations.save("db.txt", people);
+						input.close();
 						System.exit(0);
 					}
 					if (choice == 1) {
@@ -38,7 +40,7 @@ public class Main {
 					}
 					if (choice == 3) {
 						if(ops.delete()) {
-							System.out.println("sikeres törlés");
+							System.out.println("Sikeres törlés");
 						}else {
 							System.out.println("Sikertelen törlés");
 						}
@@ -56,12 +58,12 @@ public class Main {
 					}
 
 				} else {
-					System.out.println("0 és 4 között válasszon.");
+					System.out.println("0 és 5 között válasszon.");
 				}
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
-
+			
 		}
 
 	}

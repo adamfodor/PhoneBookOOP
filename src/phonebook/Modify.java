@@ -5,30 +5,20 @@ import java.util.Scanner;
 public class Modify {
 
 	Scanner input = new Scanner(System.in);
-	/**
-	 * Modositani leht a parameter keresztnevet(First name)
-	 * @param x Entry object
-	 */
+
 	private void modFname(Entry x) {
 		System.out.println("Korábbi keresztnév: " + x.getFirstName());
 		System.out.println("Új keresztnév:");
 		String temp = input.next();
 		x.setFirstName(temp);
 	}
-	/**
-	 *  Modositani leht a parameter vezetek nevet(Last name)
-	 * @param x entry object
-	 */
+
 	private void modLname(Entry x) {
 		System.out.println("Korábbi vezetéknév: " + x.getLastName());
 		System.out.println("Új vezetéknév:");
 		String temp = input.next();
 		x.setLastName(temp);
 	}
-	/**
-	 *  Modositani leht a parameter bece nevet(Nick name)
-	 * @param x Entry object
-	 */
 
 	private void modNname(Entry x) {
 		System.out.println("Korábbi becenév: " + x.getNickname());
@@ -36,42 +26,28 @@ public class Modify {
 		String temp = input.next();
 		x.setNickname(temp);
 	}
-	/**
-	 * Modositani lehet a parameter privat telefonszamat(Private number)
-	 * @param x Entry object
-	 */
+
 	private void modPnum(Entry x) {
 		System.out.println("Korábbi  privát telefonszám: " + x.getPrivateNum());
 		System.out.println("Új privát telefonszám:");
 		String temp = input.next();
 		x.setPrivateNum(temp);
 	}
-	/**
-	 * Modositani leht a parameter munkas telefonszamt(Working number)
-	 * @param x Entry object
-	 */
+
 	private void modWnum(Entry x) {
 		System.out.println("Korábbi munkás telefonszám: " + x.getWorkNum());
 		System.out.println("Új munkás telefonszám:");
 		String temp = input.next();
 		x.setWorkNum(temp);
 	}
-	/**
- 	* Modositani leht a parameter cimet(Address)
- 	* @param x Entry object
- 	*/
+
 	private void modAddr(Entry x) {
 		System.out.println("Korábbi cím: " + x.getAddress());
 		System.out.println("Új cím:");
 		String temp = input.next();
 		x.setAddress(temp);
 	}
-	
-	/**
-	 * Ebben a fuggvenyben lehget kiválasztani, hogy mit szeretnenk modositani.
-	 * @param x Entry tipusu objektum
-	 * @return true ha sikerult a modositas, False ha nem sikerult modositani.
-	 */
+
 	public boolean modAll(Entry x) {
 		boolean res = true;
 		System.out.println("mit szeretne modositani?");
@@ -84,7 +60,7 @@ public class Modify {
 				6. Cím""");
 		try {
 			int choose = input.nextInt();
-			if (choose >= 1 && choose <= 6) {
+			if (choose >= 1 && choose <= 7) {
 				if (choose == 1) {
 					modLname(x);
 				}

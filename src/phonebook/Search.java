@@ -20,11 +20,11 @@ public class Search {
 	 * @param db
 	 * 
 	 */
-	protected ArrayList<Entry> byName(ArrayList<Entry> db, String kire) {
+	public ArrayList<Entry> byName(ArrayList<Entry> db, String kire) {
 		ArrayList<Entry> temp = new ArrayList<>();
 
 		if (db.size() == 0) {
-			System.out.println("Nincs talalat");
+			System.out.println("Nincs tárolt adat");
 		} else {
 			kire.replace(" ", "");
 			Pattern p = Pattern.compile(kire, Pattern.CASE_INSENSITIVE);
@@ -46,11 +46,11 @@ public class Search {
 	 *           nincs akkor nem ir ki semmit.
 	 * @return
 	 */
-	protected ArrayList<Entry> byNum(ArrayList<Entry> db, String kire) {
+	public ArrayList<Entry> byNum(ArrayList<Entry> db, String kire) {
 		ArrayList<Entry> temp = new ArrayList<>();
 
 		if (db.size() == 0) {
-			System.out.println("Nincs találat");
+			System.out.println("Nincs tárolt adat");
 
 		} else {
 			Pattern p = Pattern.compile(kire, Pattern.CASE_INSENSITIVE);
@@ -76,11 +76,11 @@ public class Search {
 	 * @return
 	 * 
 	 */
-	protected ArrayList<Entry> byAddress(ArrayList<Entry> db, String cim) {
+	public ArrayList<Entry> byAddress(ArrayList<Entry> db, String cim) {
 		ArrayList<Entry> temp = new ArrayList<>();
 
 		if (db.size() == 0) {
-			System.out.println("Nincs találat");
+			System.out.println("Nincs tárolt adat");
 
 		} else {
 			cim.replace(" ", "");
@@ -103,7 +103,7 @@ public class Search {
 	 * @param db
 	 * 
 	 */
-	protected void print(ArrayList<Entry> temp) {
+	private void print(ArrayList<Entry> temp) {
 		for (Entry x : temp) {
 			System.out.println(x);
 		}

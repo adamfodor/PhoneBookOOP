@@ -1,1 +1,2 @@
 fodor,adam,adi,god,nincs,062055552496
+jhon,doe,jhonny,NYC,nincs,666
